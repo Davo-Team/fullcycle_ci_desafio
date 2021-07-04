@@ -1,0 +1,12 @@
+name: desafio_fullcycle_ci_sonarcloud
+on:
+  pull_request:
+    branches: 
+      - dev
+
+jobs:
+  run-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm run test
